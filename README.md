@@ -2,9 +2,9 @@
 
 ## 支持pod导入
 
-* pod 'RouteManager'
+* pod 'SafeObject'
 
-* 执行pod search RouteManager提示搜索不到，可以执行以下命令更新本地search_index.json文件
+* 执行pod search SafeObject提示搜索不到，可以执行以下命令更新本地search_index.json文件
   
 ```objc 
 rm ~/Library/Caches/CocoaPods/search_index.json
