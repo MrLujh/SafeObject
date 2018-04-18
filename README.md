@@ -1,24 +1,40 @@
-# RNExample---react-native 示例
-
-## 示例项目运行步骤
-前天需要安装一下node.js，如果没有先安装一下
-1.进入RN文件  终端运行：npm install
-
-2.进入项目目录  终端运行：pod install
-
-3.进入RN文件   终端运行：npm start,然后运行项目就可以了
+# SafeObject
 
 ## 前言
 
-    对于 React Native，iOS 开发者社区也是褒贬不一。有一部分的开发者认为React Native无论在性能，开发成本还是效率都要比苹果原生那套要好，成为开发的首选；也有一部分的开发着认为React Native 不过是 Facebook 的又一个玩具，以它现在的稚嫩还难以对原生的 Swift/Objective-C 造成足够威胁。对一门新兴的技术是否值得在开发采用，取决于该技术的本身是否具备足够的优点和是否符合目前的开发需求。
+    此文是基于这些年工作中项目里面常见崩溃的一些总结，整理出来方便查阅，希望对大家都有所帮助。
 
 
-## 起源
+## App常见崩溃
 
-* Native App 优点是功能强大、性能优越。但终究是受制于苹果，而且多版本维护十分痛苦。
+* 数组下标越界
 
-* 为了不受苹果掌控，Facebook 曾花费大量的人力物力进行移动 HTML5 技术研发。虽然有些成果，但始终离 Native App 有差距，而且这个差距可能永远赶不上。
+示例代码：
 
+```objc       
+- (void)testArrayOutOfBounds
+{
+    NSArray *testArray = @[@1,@2,@3];
+    
+    NSNumber *num = testArray[3];
+}
+```
+
+* 字典构造造与修改
+
+示例代码：
+
+```objc       
+- (void)testDicSetNilValueCrash
+{
+    // 构造不可变字典时 key和value都不能为空
+    NSString *nilValue = nil;
+    NSString *nilKey = nil;
+    NSDictionary *dic1 = @{@"key" : nilValue};
+    NSDictionary *dic2 = @{nilKey : @"value"};
+}
+
+```
 * 在转型 Native App 开发后，Facebook 内部其实还在研发一种新的移动技术，并开始使用这种技术开发内部 App。这个技术便是 React Native。
 
 * 2015年3月，Facebook 正式公开发布 React Native，并将该技术开源。虽然当时开发平台仅支持 Mac OS，部署也仅支持 iOS 平台。
