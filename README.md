@@ -100,6 +100,4 @@ rm ~/Library/Caches/CocoaPods/search_index.json
 }
 ```
 
-![Mou icon](https://github.com/MrLujh/Fastlane--Packaging/blob/master/111.gif)
-
 
