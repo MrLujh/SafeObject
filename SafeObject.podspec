@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-s.name        = 'SafeObject'
+s.name        = 'SafeObject-zp'
 s.version     = '0.1.1'
 s.authors     = { 'ZPP506' => '94460330@qq.com' }
 s.homepage    = 'https://github.com/ZPP506/SafeObject'
