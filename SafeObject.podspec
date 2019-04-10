@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-s.name        = 'SafeObject-zp'
+s.name        = 'SafeObject_zp'
 s.version     = '0.1.1'
 s.authors     = { 'ZPP506' => '94460330@qq.com' }
 s.homepage    = 'https://github.com/ZPP506/SafeObject'
@@ -9,6 +9,6 @@ s.source      = { :git => 'https://github.com/ZPP506/SafeObject.git',
 s.license     = { :type => "MIT", :file => "LICENSE" }
 s.platform = :ios, '7.0'
 s.requires_arc = true
-s.source_files = "SafeObject", "*.{h,m}"
+s.source_files = "SafeObject_zp", "*.{h,m}"
 s.ios.deployment_target = '7.0'
 end
