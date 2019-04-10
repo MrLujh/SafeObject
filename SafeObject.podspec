@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name        = 'SafeObject'
-s.version     = '0.0.1'
-s.authors     = { 'daniulaolu' => '287929070@qq.com' }
-s.homepage    = 'https://github.com/MrLujh/SafeObject'
+s.version     = '0.1.1'
+s.authors     = { 'ZPP506' => '94460330@qq.com' }
+s.homepage    = 'https://github.com/ZPP506/SafeObject'
 s.summary     = '项目中防止数组字典崩溃'
-s.source      = { :git => 'https://github.com/MrLujh/SafeObject.git',
+s.source      = { :git => 'https://github.com/ZPP506/SafeObject.git',
 :tag => s.version.to_s }
 s.license     = { :type => "MIT", :file => "LICENSE" }
 s.platform = :ios, '7.0'
